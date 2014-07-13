@@ -7,10 +7,8 @@ data$DateTime <- strptime(as.character(data$DateTime), "%Y-%m-%d %H:%M:%S")
 
 #Creating Plot 2
 data$Global_active_power <- as.numeric(as.character(data$Global_active_power))
-plot(data$DateTime, data$Global_active_power, type = "l")
+plot(data$DateTime, data$Global_active_power, type = "l", xlab = "", ylab ="Global Active Power (kilowatts)")
 
-
-?lines
 #Creating .PNG of Plot 2
 dev.copy(png, file = "plot2.png", width = 480, height =480)
 dev.off()
